@@ -1,14 +1,55 @@
+<head>
+	<!-- ビューポートの設定 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+
+<div id="header">
+  <div class="logo">
+    <%= link_to 'TAKUMI', root_path %>
+  </div>
+  <nav>
+    <!-- <form class="search" action="search.php">
+      <input name="q" placeholder="Search..." type="search">
+    </form> -->
+    <ul>
+      <li>
+        <%= link_to 'TOP', root_path %>
+      </li>
+      <li>
+        <%= link_to '新規タスク登録', new_todo_path %>
+      </li>
+      <li>
+        <%= link_to 'タスク一覧', todos_path %>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+$('#header').prepend('<div id="menu-icon"><span class="first"></span><span class="second"></span><span class="third"></span></div>');
+
+$("#menu-icon").on("click", function(){
+  $("nav").slideToggle();
+  $(this).toggleClass("active");
+});
+</script>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Todos</h1>
+<CENTER>
+
+<h1>タスク一覧</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Date</th>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Deadline</th>
+      <th>登録日</th>
+      <th>タイトル</th>
+      <th>詳細</th>
+      <th>期限</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,14 +61,16 @@
         <td><%= todo.title %></td>
         <td><%= todo.body %></td>
         <td><%= todo.deadline %></td>
-        <td><%= link_to 'Show', todo %></td>
-        <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-        <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', todo %></td>
+        <td><%= link_to '編集', edit_todo_path(todo) %></td>
+        <td><%= link_to '削除', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+</CENTER>
+
 <br>
 
-<%= link_to 'New Todo', new_todo_path %>
+<%= link_to '新規タスク登録', new_todo_path %>
