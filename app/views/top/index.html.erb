@@ -1,2 +1,91 @@
-<h1>Top#index</h1>
-<p>Find me in app/views/top/index.html.erb</p>
+<head>
+	<!-- ビューポートの設定 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+
+<div id="header">
+  <div class="logo">
+    <a href="#">Responsive Nav</a>
+  </div>
+  <nav>
+    <!-- <form class="search" action="search.php">
+      <input name="q" placeholder="Search..." type="search">
+    </form> -->
+    <ul>
+      <li>
+        <a href="">Home</a>
+      </li>
+      <li>
+        <a href="">About</a>
+      </li>
+      <li>
+        <a href="">Portfolio</a>
+      </li>
+      <li>
+        <a href="">Team</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+$('#header').prepend('<div id="menu-icon"><span class="first"></span><span class="second"></span><span class="third"></span></div>');
+
+$("#menu-icon").on("click", function(){
+  $("nav").slideToggle();
+  $(this).toggleClass("active");
+});
+
+
+</script>
+
+
+<div class="top01">
+  <h1>ToDo管理アプリ</h1>
+</div>
+
+<div class="accbox">
+  <!--ラベル1-->
+    <label for="label1">クリックして表示1</label>
+    <input type="checkbox" id="label1" class="cssacc" />
+    <div class="accshow">
+      <!--ここに隠す中身-->
+      <p>
+        こんにちは1
+      </p>
+    </div>
+    <!--//ラベル1-->
+  <!--ラベル2-->
+    <label for="label2">クリックして表示2</label>
+    <input type="checkbox" id="label2" class="cssacc" />
+    <div class="accshow">
+      <!--ここに隠す中身-->
+      <p>
+        こんにちは2
+      </p>
+    </div>
+    <!--//ラベル2-->
+  <!--ラベル3-->
+    <label for="label3">クリックして表示3</label>
+    <input type="checkbox" id="label3" class="cssacc" />
+    <div class="accshow">
+      <!--ここに隠す中身-->
+      <p>
+        こんにちは3
+      </p>
+    </div>
+    <!--//ラベル3-->
+  <!--ラベル4-->
+    <label for="label4">クリックして表示4</label>
+    <input type="checkbox" id="label4" class="cssacc" />
+    <div class="accshow">
+      <!--ここに隠す中身-->
+      <p>
+        こんにちは4
+      </p>
+    </div>
+    <!--//ラベル4-->
+</div><!--//.accbox-->
