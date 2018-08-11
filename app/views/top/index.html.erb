@@ -50,6 +50,11 @@ $("#menu-icon").on("click", function(){
     <p>現在のタスク数<br><%= @todos.count %></p>
 </div>
 
+<div class="top02">
+<a href="todos/new" class="square_btn">新規タスク登録</a>
+<a href="todos" class="square_btn">タスク一覧</a>
+</div>
+
 <CENTER>
 
   <!-- <div class="row">
@@ -58,7 +63,6 @@ $("#menu-icon").on("click", function(){
   </div> -->
 
 
-<CENTER>
 <div class="accbox">
   <!--ラベル1-->
     <label for="label1">タスク管理アプリとは</label>
@@ -101,4 +105,11 @@ $("#menu-icon").on("click", function(){
     </div>
     <!--//ラベル4-->
 </div><!--//.accbox-->
+
+<div id="social-platforms">
+
+<a class="btn btn-icon btn-facebook" href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+<a class="btn btn-icon btn-twitter" href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</div>
+
 </CENTER>
